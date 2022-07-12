@@ -18,7 +18,7 @@ const io = new Server(server, {
     }
 })
 
-app.use(express.static('../../client/dist'))
+app.use(express.static(path.join(__dirname,'../../client/dist')))
 
 io.on(Events.Connection, (socket) => {
     roomHandler(socket)
