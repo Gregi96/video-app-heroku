@@ -6,7 +6,7 @@ import { roomHandler } from './room'
 import { Events } from './types'
 import path from 'path'
 
-const port = 8080;
+const port = 3000;
 const app = express()
 app.use(cors)
 const server = http.createServer(app)
