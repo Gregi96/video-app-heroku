@@ -1,12 +1,13 @@
 import express from 'express'
 import http from 'http'
+import dotenv from 'dotenv'
 import { Server } from 'socket.io'
 import cors from 'cors'
 import { roomHandler } from './room'
 import { Events } from './types'
 import path from 'path'
 
-const port = 8080;
+dotenv.config()
 const app = express()
 app.use(cors)
 const server = http.createServer(app)
@@ -30,6 +31,7 @@ app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
+const port = process.env.PORT || 8080
 server.listen(port, () => {
     console.log("Listening to the server", port)
 })
