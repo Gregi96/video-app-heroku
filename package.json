@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd server && yarn install && yarn start",
-    "heroku-postbuild": "cd client && yarn install && yarn dev"
+    "start": "cd server && yarn install && yarn dev",
+    "heroku-postbuild": "cd client && yarn install && yarn start"
   },
   "engines": {
     "node": "16.15.0"
