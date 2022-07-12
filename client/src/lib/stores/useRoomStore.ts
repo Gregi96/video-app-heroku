@@ -20,7 +20,7 @@ export type useRoomStoreResponse = {
     removePeer(peerId: string, stream: MediaStream): void
 }
 
-const ws = socketIoClient(APP_CONFIG.WP_URL)
+const ws = socketIoClient(window.location.origin)
 
 export const useRoomStore = (): useRoomStoreResponse => {
     const [peers, setPeers] = useState<PeerState>({})
