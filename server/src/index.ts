@@ -9,7 +9,7 @@ import path from 'path'
 
 dotenv.config()
 const app = express()
-app.use(cors)
+app.use(cors())
 const server = http.createServer(app)
 const io = new Server(server, {
     cors: {
@@ -30,7 +30,12 @@ io.on(Events.Connection, (socket) => {
 
 app.get('/*', (req, res) => {
     console.log(req)
-    res.sendFile(path.join(__dirname, '../../client/dist/index.html'));
+    res.sendFile(path.join(__dirname, '../../client/dist/index.html'), (err) => {
+        if (err) {
+            console.log(err)
+            res.status(500).send({err, path: path.join(__dirname, '../../client/dist/index.html')})
+        }
+    });
 });
 
 const port = process.env.PORT || 8080
