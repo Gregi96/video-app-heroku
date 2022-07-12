@@ -26,6 +26,7 @@ io.on(Events.Connection, (socket) => {
 })
 
 app.get('/*', (req, res) => {
+    console.log(req)
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
