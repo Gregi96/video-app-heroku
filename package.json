@@ -8,8 +8,12 @@
     "heroku-postbuild": "cd client && yarn install && yarn build"
   },
   "engines": {
-    "node": "14.17.5"
+    "node": "16.15.0"
   },
   "author": "Grzegorz Klimek",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": "git@github.com:Gregi96/video-app-heroku.git",
+  "dependencies": {
+    "tsc": "2.0.4"
+  }
 }
