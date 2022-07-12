@@ -1,0 +1,15 @@
+{
+  "name": "chat-app-react-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd server && yarn install && yarn start",
+    "heroku-postbuild": "cd client && yarn install && yarn build"
+  },
+  "engines": {
+    "node": "14.17.5"
+  },
+  "author": "Grzegorz Klimek",
+  "license": "ISC"
+}
