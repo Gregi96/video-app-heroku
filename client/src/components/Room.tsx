@@ -13,8 +13,7 @@ export const Room: React.FunctionComponent = () => {
         if (peer) {
             ws.emit(SocketEvents.joinRoom, {
                 roomId: id,
-                // eslint-disable-next-line no-underscore-dangle
-                peerId: peer._id
+                peerId: peer.id
             })
         }
     }, [id, peer])

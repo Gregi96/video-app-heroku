@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd server && yarn install && yarn build && yarn startHeroku",
-    "heroku-postbuild": "cd client && yarn install && yarn dev"
+    "start": "cd server && yarn install && yarn build && yarn startHeroku && cd -",
+    "heroku-postbuild": "cd client && yarn install && cd -"
   },
   "engines": {
     "node": "16.15.0"

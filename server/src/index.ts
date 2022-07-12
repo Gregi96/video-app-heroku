@@ -18,6 +18,8 @@ const io = new Server(server, {
     }
 })
 
+app.use(express.static('../../client/dist'))
+
 io.on(Events.Connection, (socket) => {
     roomHandler(socket)
 
@@ -28,7 +30,7 @@ io.on(Events.Connection, (socket) => {
 
 app.get('/*', (req, res) => {
     console.log(req)
-    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+    res.sendFile(path.join(__dirname, '../../client/dist/index.html'));
 });
 
 const port = process.env.PORT || 8080

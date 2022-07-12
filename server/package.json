@@ -9,7 +9,7 @@
     "watch": "tsc -w",
     "prestart": "yarn build",
     "start": "concurrently --kill-others \"yarn watch\" \"nodemon .\"",
-    "startHeroku": "PROD=true node dist/index.js"
+    "startHeroku": "node dist/index.js"
   },
   "devDependencies": {
     "@types/node": "18.0.3",
