@@ -20,7 +20,6 @@ export const VideoPlayer: React.FunctionComponent<VideoPlayerProps> = ({
         <Video
             ref={videoRef}
             autoPlay
-            muted
         />
     )
 }
