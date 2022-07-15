@@ -3,10 +3,12 @@ import styled from 'styled-components'
 
 type VideoPlayerProps = {
     stream: MediaStream,
+    myPeer?: boolean
 }
 
 export const VideoPlayer: React.FunctionComponent<VideoPlayerProps> = ({
-    stream
+    stream,
+    myPeer
 }) => {
     const videoRef = useRef<HTMLVideoElement>(null)
 
@@ -20,6 +22,7 @@ export const VideoPlayer: React.FunctionComponent<VideoPlayerProps> = ({
         <Video
             ref={videoRef}
             autoPlay
+            muted={myPeer}
         />
     )
 }

@@ -24,6 +24,7 @@ export const Room: React.FunctionComponent = () => {
                 <Fragment>
                     <VideoPlayer
                         stream={stream}
+                        myPeer
                     />
                 </Fragment>
             )}

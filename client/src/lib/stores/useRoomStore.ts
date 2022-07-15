@@ -21,6 +21,7 @@ export type useRoomStoreResponse = {
 }
 
 const ws = socketIoClient(window.location.origin)
+// const ws = socketIoClient(APP_CONFIG.WP_URL)
 
 export const useRoomStore = (): useRoomStoreResponse => {
     const [peers, setPeers] = useState<PeerState>({})
