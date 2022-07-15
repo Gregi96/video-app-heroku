@@ -93,7 +93,7 @@ export const useRoomStore = (): useRoomStoreResponse => {
             call.answer(stream)
             call.on('stream', peerStream => addPeer(call.peer, peerStream))
         })
-    }, [myPeer, stream, peers])
+    }, [myPeer, stream])
 
     return {
         ws,
